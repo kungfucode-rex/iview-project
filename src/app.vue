@@ -17,8 +17,6 @@
         beforeDestroy () {
 
         },
-        methods: {
-
-        }
+        methods: {}
     }
 </script>

@@ -58,6 +58,19 @@ module.exports = {
             {
                 test: /\.(html|tpl)$/,
                 loader: 'html-loader'
+            },
+            {
+                test: /\.styl$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'stylus-loader'
+                        /*options: {
+                            use: [stylus_plugin()],
+                        },*/
+                    },
+                ],
             }
         ]
     },
