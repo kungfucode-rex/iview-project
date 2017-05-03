@@ -43,9 +43,10 @@
     export default {
         methods: {
             handleStart () {
-                this.$Modal.info({
-                    title: 'Bravo',
-                    content: 'Now, enjoy the convenience of iView.'
+                debugger
+                this.$Modal.warning({
+                    title: 'Hi Rex',
+                    content: 'Now, you can start learn iview.'
                 });
             }
         }
