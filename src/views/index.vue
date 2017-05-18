@@ -77,36 +77,57 @@
                             <Icon type="ios-navigate" :size="iconSize"></Icon>
                             导航一
                         </template>
-                        <Menu-item name="1-1">选项1</Menu-item>
-                        <Menu-item name="1-2">选项2</Menu-item>
-                        <Menu-item name="1-3">选项3</Menu-item>
+                        <Menu-item name="1-1">
+                            <router-link tag="span" to="/navFirst">Button</router-link>
+                        </Menu-item>
+                        <Menu-item name="1-2">
+                            <router-link tag="span" to="/navSecond">Input</router-link>
+                        </Menu-item>
+                        <Menu-item name="1-3">
+                            <router-link tag="span" to="/navThird">Radio</router-link>
+                        </Menu-item>
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
                             <Icon type="ios-navigate" :size="iconSize"></Icon>
                             导航二
                         </template>
-                        <Menu-item name="2-1">选项1</Menu-item>
-                        <Menu-item name="2-2">选项2</Menu-item>
-                        <Menu-item name="2-3">选项3</Menu-item>
+                        <Menu-item name="2-1">
+                            <router-link tag="span" to="/checkbox">复选框</router-link>
+                        </Menu-item>
+                        <Menu-item name="2-2">
+                            <router-link tag="span" to="switch">Switch</router-link>
+                        </Menu-item>
+                        <Menu-item name="2-3">
+                            <router-link tag="span" to="table">Table</router-link>
+                        </Menu-item>
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
                             <Icon type="ios-navigate" :size="iconSize"></Icon>
                             导航三
                         </template>
-                        <Menu-item name="3-1">选项1</Menu-item>
-                        <Menu-item name="3-2">选项2</Menu-item>
-                        <Menu-item name="3-3">选项3</Menu-item>
+                        <Menu-item name="3-1">
+                            <router-link tag="span" to="select">Select</router-link>
+                        </Menu-item>
+                        <Menu-item name="3-2">
+                            <router-link tag="span" to="slider">slider</router-link>
+                        </Menu-item>
+                        <Menu-item name="3-3">
+                            <router-link tag="span" to="datepicker">Datepicker</router-link>
+                        </Menu-item>
+                        <Menu-item name="3-4">
+                            <router-link tag="span" to="timepicker">Timepicker</router-link>
+                        </Menu-item>
+                        <Menu-item name="3-5">
+                            <router-link tag="span" to="cascader">Cascader</router-link>
+                        </Menu-item>
                     </Submenu>
                 </Menu>
             </i-col>
             <i-col :span="spanRight">
                 <div class="layout-content-main">
-                    <i-button type="text" @click="toggleClick">
-                        <Icon type="navicon" size="32"></Icon>
-                    </i-button>
-                    内容区域
+                    <router-view></router-view>
                 </div>
             </i-col>
         </div>
@@ -129,15 +150,6 @@
           }
         },
         methods: {
-            toggleClick(){
-                if(this.spanLeft === 5){
-                    this.spanLeft = 2;
-                    this.spanRight = 22;
-                }else{
-                    this.spanLeft = 5;
-                    this.spanRight = 19;
-                }
-            }
         }
     }
 </script>
