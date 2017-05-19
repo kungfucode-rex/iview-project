@@ -10,6 +10,7 @@ import Slider from './views/slider.vue'
 import Datepicker from './views/datepicker.vue'
 import Timepicker from './views/timepicker.vue'
 import Cascader from './views/cascader.vue'
+import Form from './views/form.vue'
 
 const routers = [
     {
@@ -62,6 +63,10 @@ const routers = [
             {
                 path: 'cascader',
                 component: Cascader
+            },
+            {
+                path: 'form',
+                component: Form
             }
         ]
     }
